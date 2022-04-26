@@ -94,8 +94,35 @@ for(let i = 0 ; i < articles.length ; i++){
 
 for(let i = 0 ; i < articles.length ; i++){
     console.log(articles[i])
-    let color= ["#FFFF99","#B5FF91","#94DBFF","#FFBAFF","#FFBD9D","#C7A3ED","#CC9898","#8AC007","#CCC007","#FFAD5C"];
+    let getRandomColor = function(){    
+        return (function(m,s,c){    
+             return (c ? arguments.callee(m,s,c-1) : '#') + s[m.floor(m.random() * 17)]    
+        })(Math,'0123456784738jaidf',5)
+    } 
+
+    // const getRandom = function(colors){
+    //     return colors[parseInt(Math.random() * colors.length)] 
+    //    }
+    // const paleta = ['f4f1de','e07a5f','3d405b','81b29a','f2cc8f']; 
+
+    // function getRandomColor(){
+    //     let letters = ['f4f1de','e07a5f','3d405b','81b29a','f2cc8f'];
+    //     let color = '#';
+    //     for(let i = 0 ; i < 6 ; i++){
+    //         color += letters[Math.floor(Math.random() * letters.length)]
+    //     }
+    // }
     articles[i].addEventListener("mouseover", function(event){
-        articles[i].style.background = ;
+        articles[i].style.background = getRandomColor();
     })
 }
+
+
+//Utiliza la función creada getRandom para utilizar colores aleatorios de una 
+//paleta que hayas escogido de coolors.co en los apartados anteriores.
+
+// const getRandom = function(colors){
+//      return colors[parseInt(Math.random() * colors.length)] 
+//     }
+// const paleta = ['f4f1de','e07a5f','3d405b','81b29a','f2cc8f']; 
+// const gifs = ["./assets/magic-1.gif", "./assets/magic-2.gif", "./assets/magic-3.gif", "./assets/magic-4.gif", "./assets/magic-5.gif", "./assets/magic-6.gif"]
